@@ -1,7 +1,7 @@
 package com.herman.springboot.demo.service;
 
-import com.herman.springboot.demo.mapper.DemoMapper;
-import com.herman.springboot.demo.entity.Demo;
+import com.herman.springboot.framework.mapper.build.dao.DemoMapper;
+import com.herman.springboot.framework.mapper.build.entity.Demo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +17,6 @@ public class DemoService {
     private DemoMapper demoDao;
 
     public Demo get(String id) {
-        return demoDao.get(id);
+        return demoDao.selectByPrimaryKey(id);
     }
 }
