@@ -6,7 +6,10 @@ spring:
     url:  jdbc:mysql://127.0.0.1:3306/demo
     username: root
     password: 123456
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
 mybatis:
-  mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.herman.springboot.entity
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.herman.springboot.*.entity
